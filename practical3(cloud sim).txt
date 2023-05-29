@@ -1,0 +1,35 @@
+step1- download jdk version"17.0.1"
+
+step2- open terminal
+ 	1st command: java -version
+ 	2nd command: gedit /etc/environment		//to setup the environment
+	3rd command: sudo update-alternatives --config java
+	4th command: java -version     //copy the path from usr upto jdk-17
+	5th command: ant -version
+	if not available then download it by running the command: sudo apt  install ant
+step3- go to this github repository "https://github.com/Cloudslab/cloudsim..."
+then go to cloudsim-3.0.3 download the zipfile of cloudsim
+then extract the file
+step4-go to terminal 
+command: cd Downloads
+	 cd cloudsim-3.0.3/
+	 ls
+	 javac -classpath jars/cloudsim-3.0.3.jar:examples examples/org/cloudbus/cloudsim/examples/CloudSimExample1.java
+	 java -classpath jars/cloudsim-3.0.3.jar:examples org.cloudbus.cloudsim.examples.CloudSimExample1
+if this commands run successfully means your cloudsim is installe successfully.
+step 5- go to vscode
+upload the extracted folder of cloudsim
+then go to sources you will get a file like DataCenterBroker.java 
+open this file
+copy the code from the given file paste it into the DatacenterBroker.java Save this.
+ in vs code go to the examples-->org-->power 
+ then create file Simulation.java 
+ copy the code from given simulation txt file paste it in vs code file save it.
+ 
+ 
+then go to terminal 
+ command: javac -classpath jars/cloudsim-3.0.3.jar: examples/org/cloudbus/cloudsim/examples/Simulation.java
+	   java -classpath jars/cloudsim-3.0.3.jar: examples/org/cloudbus/cloudsim/examples/Simulation
+	   
+
+

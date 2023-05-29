@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      input {
+        width: 100%;
+        margin: 10px 0 10px 0;
+      }
+    </style>
+    <script>
+      function addData() {
+        const myObj = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          password: document.getElementById("pass").value,
+        };
+        const myJSON = JSON.stringify(myObj); //used to convert js object to json string
+        localStorage.setItem("myData", myJSON); //allows you to store key-value pairs locally in the browser, which can persist even when the browser is closed and reopened
+      }
+    </script>
+    <div>
+      <h2>data storage</h2>
+    </div>
+    <form action="second.html">
+      enter Name
+      <input type="text" id="name" />
+      enter Email
+      <input type="email" name="" id="email" />
+      enter password
+      <input type="password" name="" id="pass" />
+      <button type="submit" onclick="addData()">Submit</button>
+    </form>
+  </body>
+</html>

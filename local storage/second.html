@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      input {
+        width: 100%;
+        margin: 10px 0 10px 0;
+      }
+    </style>
+    <script>
+      function getData() {
+        const getDataa = localStorage.getItem("myData");
+        const myOBJ = JSON.parse(getDataa); //json string to js oject string
+        document.getElementById("table1").rows[1].cells[0].innerHTML = myOBJ.name;
+        document.getElementById("table1").rows[1].cells[1].innerHTML = myOBJ.email;
+        document.getElementById("table1").rows[1].cells[2].innerHTML = myOBJ.password;
+      }
+    </script>
+    <div>
+      <h2>data storage retrieve</h2>
+    </div>
+    <table style="width: 100%" id="table1">
+      <tr>
+        <td>Name</td>
+        <td>email</td>
+        <td>password</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <h2><button type="submit" onclick="getData()">GetData</button></h2>
+    </table>
+  </body>
+</html>
